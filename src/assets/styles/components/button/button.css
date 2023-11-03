@@ -1,0 +1,127 @@
+.button {
+  position: relative;
+  display: flex;
+  border-radius: var(--radius2);
+  align-items: center;
+  cursor: pointer;
+  padding: var(--spacing6) var(--spacing8);
+  border: 0;
+  height: 40px;
+  width: fit-content;
+}
+
+.button.has-icon-only {
+  padding: var(--spacing5);
+}
+
+.button.has-left-icon {
+  padding-left: var(--spacing6);
+}
+
+.button.has-right-icon {
+  padding-right: var(--spacing6);
+}
+
+.button:not(:disabled):focus {
+  outline-offset: 2px;
+  outline: 2px solid var(--colorGlobalBorderFocus);
+}
+
+.button:disabled {
+  background-color: var(--colorGlobalAllDisabledSoft);
+  color: var(--colorGlobalAllDisabledStrong);
+  cursor: not-allowed;
+}
+
+.primary:not(:disabled) {
+  background-color: var(--colorActionPrimaryBackgroundDefault);
+  color: var(--colorActionPrimaryContentDefault);
+}
+
+.primary:not(:disabled):hover, .primary:not(:disabled):active {
+  background-color: var(--colorActionPrimaryBackgroundInteracting);
+  color: var(--colorActionPrimaryContentInteracting);
+}
+
+.primary:not(:disabled):focus {
+  background-color: var(--colorActionPrimaryBackgroundInteracting);
+  color: var(--colorActionPrimaryContentInteracting);
+}
+
+.secondary:not(:disabled) {
+  background-color: var(--colorActionSecondaryBackgroundDefault);
+  color: var(--colorActionSecondaryContentDefault);
+  border: 1px solid var(--colorActionSecondaryBorderDefault);
+}
+
+.secondary:not(:disabled):hover, .secondary:not(:disabled):active {
+  background-color: var(--colorActionSecondaryBackgroundInteracting);
+  color: var(--colorActionSecondaryContentInteracting);
+  border: 1px solid var(--colorActionSecondaryBorderInteracting);
+}
+
+.secondary:not(:disabled):focus {
+  background-color: var(--colorActionSecondaryBackgroundInteracting);
+  color: var(--colorActionSecondaryContentInteracting);
+}
+
+.tertiary:not(:disabled) {
+  background-color: var(--colorActionTertiaryaryBackgroundDefault);
+  color: var(--colorActionTertiaryContentDefault);
+}
+
+.tertiary:not(:disabled):hover, .tertiary:not(:disabled):active {
+  background-color: var(--colorActionTertiaryBackgroundInteracting);
+  color: var(--colorActionTertiaryContentInteracting);
+}
+
+.tertiary:not(:disabled):focus {
+  background-color: var(--colorActionTertiaryBackgroundInteracting);
+  color: var(--colorActionTertiaryContentInteracting);
+}
+
+.button .icon-left, .button .icon-right {
+  width: 16px;
+  height: 16px;
+}
+
+.button .icon-left {
+  margin-right: var(--spacing3);
+}
+
+.button .icon-right {
+  margin-left: var(--spacing3);
+}
+
+.button .icon-only {
+  width: 20px;
+  height: 20px;
+}
+
+.button.has-tooltip {
+  position: relative;
+}
+
+.button.has-tooltip::after {
+  content: attr(aria-label);
+  position: absolute;
+  top: var(--spacing12);
+  left: 50%;
+  border-radius: var(--radius1);
+  display: none;
+  width: 106px;
+  background-color: var(--colorNeutralBackgroundMedium);
+  border: 1px solid var(--colorNeutralBorderMedium);
+  padding: var(--spacing3) var(--spacing4);
+  color: var(--colorNeutralContentMedium);
+  font-weight: var(--fontGlobalWeightMedium);
+  font-size: var(--fontGlobalSizeXS);
+  line-height: var(--fontGlobalLineHeightXS);
+  letter-spacing: var(--fontGlobalLetterSpacingS);
+  transform: translate(-50%, 0);
+  z-index: 1000;
+}
+
+.button.has-tooltip:hover::after, .button.has-tooltip:focus::after {
+  display: inline;
+}

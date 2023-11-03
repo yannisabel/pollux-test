@@ -1,0 +1,62 @@
+/* Fonts variables */
+:root {
+  /* font-family */
+  --fontGlobalDefault:  'Inter', sans-serif;
+  /* font-weight */
+  --fontGlobalWeightRegular: 400;
+  --fontGlobalWeightMedium: 500;
+  --fontGlobalWeightBold: 600;
+  /* font-size */
+  --fontGlobalSizeXS: 14px;
+  --fontGlobalSizeS: 16px;
+  --fontGlobalSizeM: 18px;
+  /* line-height */
+  --fontGlobalLineHeightXS: 16px; /* rounded to avoid the 15.96px specified in Figma */
+  --fontGlobalLineHeightS: 24px;
+  /* letter-spacing */
+  --fontGlobalLetterSpacingXS: -0.07px;
+  --fontGlobalLetterSpacingS: -0.14px;
+  --fontGlobalLetterSpacingM: -0.16px;
+  --fontGlobalLetterSpacingL: -0.36px;
+}
+
+/* Fonts class as token */
+.font-monoline-small {
+  font-family: var(--fontGlobalDefault);
+  font-weight: var(--fontGlobalWeightMedium);
+  font-size: var(--fontGlobalSizeXS);
+  line-height: var(--fontGlobalLineHeightXS);
+  letter-spacing: var(--fontGlobalLetterSpacingS);
+}
+
+.font-monoline-medium {
+  font-family: var(--fontGlobalDefault);
+  font-weight: var(--fontGlobalWeightBold);
+  font-size: var(--fontGlobalSizeXS);
+  line-height: var(--fontGlobalLineHeightXS);
+  letter-spacing: var(--fontGlobalLetterSpacingS);
+}
+
+.font-body-medium-regular {
+  font-family: var(--fontGlobalDefault);
+  font-weight: var(--fontGlobalWeightRegular);
+  font-size: var(--fontGlobalSizeS);
+  line-height: var(--fontGlobalLineHeightS);
+  letter-spacing: var(--fontGlobalLetterSpacingM);
+}
+
+.font-body-small-italic {
+  font-family: var(--fontGlobalDefault);
+  font-weight: var(--fontGlobalWeightRegular);
+  font-size: var(--fontGlobalSizeS);
+  line-height: var(--fontGlobalLineHeightXS);
+  letter-spacing: var(--fontGlobalLetterSpacingXS);
+}
+
+.font-heading-small {
+  font-family: var(--fontGlobalDefault);
+  font-weight: var(--fontGlobalWeightBold);
+  font-size: var(--fontGlobalSizeM);
+  line-height: var(--fontGlobalLineHeightS);
+  letter-spacing: var(--fontGlobalLetterSpacingL);
+}

@@ -1,0 +1,15 @@
+/* Spacing variables as token */
+:root {
+  --spacing1: 2px;
+  --spacing2: 4px;
+  --spacing3: 6px;
+  --spacing4: 8px;
+  --spacing5: 10px;
+  --spacing6: 12px;
+  --spacing7: 14px;
+  --spacing8: 16px;
+  --spacing9: 18px;
+  --spacing10: 20px;
+  --spacing11: 22px;
+  --spacing12: 24px;
+}

@@ -1,0 +1,109 @@
+.input-wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 48px;
+  min-width: 240px;
+  border-radius: var(--radius2);
+  background: var(--colorNeutralBackgroundStrong);
+  color: var(--colorEditionBorderDefault);
+}
+
+.input-wrapper label {
+  position: absolute;
+  padding-top: var(--spacing2);
+  padding-left: var(--spacing4);
+}
+
+.input-wrapper input {
+  height: 100%;
+  max-width:100%;
+  border: 1px solid var(--colorEditionBorderDefault);
+  border-radius: var(--radius2);
+  padding: var(--spacing8) var(--spacing4)  var(--spacing2)  var(--spacing4);
+  background: var(--colorNeutralBackgroundStrong);
+  font-size: 16px;
+  color: var(--colorNeutralContentStrong);
+}
+
+.input-wrapper input:hover, .input-wrapper input:focus {
+  border: 1px solid var(--colorEditionBorderInteracting);
+}
+
+.input-wrapper input:focus {
+  outline: 2px solid var(--colorGlobalBorderFocus);
+  outline-offset: 2px;
+}
+
+.input-wrapper input:active {
+  outline: none;
+}
+
+.input-wrapper input::placeholder {
+  /* line-height is not customisable on placeholder pseudo-class */
+  font-family: var(--fontGlobalDefault);
+  font-weight: var(--fontGlobalWeightRegular);
+  font-size: var(--fontGlobalSizeS);
+  line-height: var(--fontGlobalLineHeightS);
+  letter-spacing: var(--fontGlobalLetterSpacingM);
+  color: var(--colorNeutralContentMedium);
+}
+
+.input-wrapper input::-webkit-input-placeholder {
+  line-height: var(--fontGlobalLineHeightS) !important;
+}
+
+.input-wrapper input::-moz-placeholder {
+  /* Firefox add an opacity and a font-weight values to all placeholders by default, also line-height cannot be customisable in firefox */
+  opacity: 1;
+  font-weight: normal;
+}
+
+.input-wrapper input:hover ~ label, .input-wrapper input:focus ~ label {
+  color: var(--colorEditionContentInteracting);
+}
+
+.input-wrapper input.has-error {
+  border: 1px solid var(--colorStatusContentError);
+}
+
+.input-wrapper input.has-error ~ label {
+  color: var(--colorStatusContentError);
+}
+
+.input-wrapper .icon-error {
+  position: absolute;
+  top: 50%;
+  right: var(--spacing4);
+  width: 20px;
+  height: 20px;
+  color: var(--colorStatusContentError);
+  transform: translate(0, -50%);
+}
+
+.input-wrapper .icon-success {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: var(--spacing4);
+  width: 20px;
+  height: 20px;
+  color: var(--colorStatusContentSuccess);
+  transform: translate(0, -50%);
+}
+
+.input-wrapper .icon-success.visible {
+  display: block;
+}
+
+.input-wrapper .error-message {
+  position: absolute;
+  top: 100%;
+  padding-left: var(--spacing4);
+  font-size: 14px;
+  line-height: 21px;
+  font-style: italic;
+  color: var(--colorStatusContentError);
+}
+
+

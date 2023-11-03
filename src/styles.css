@@ -1,0 +1,49 @@
+@import './assets/styles/tokens/index';
+@import './assets/styles/components/index';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fontGlobalDefault);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+}
+
+/* utility classes and page styles */
+.wrapper {
+  max-width: 1200px;
+  margin: 3rem auto;
+}
+
+.grid-col-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing12);
+}
+
+.button-overview-wrapper {
+  display: flex;
+  gap: var(--spacing8);
+  justify-content: flex-start;
+}
+
+.buttons-row {
+  padding-bottom: var(--spacing8);
+}
+
+.input-overview-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing8);
+}
+
+.global-button-overview-wrapper, .global-input-overview-wrapper, .global-modal-overview-wrapper, .playground {
+  padding: 0 0 64px;
+}
+
+.grid-col-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--spacing8);
+}

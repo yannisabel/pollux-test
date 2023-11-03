@@ -1,0 +1,92 @@
+.modal-open {
+  overflow: hidden;
+  width: calc(100% - 15px); /* prevent offset Y on body */
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  overflow: auto;
+  inset: 0;
+  background-color: var(--colorGlobalOverlayMedium);
+  z-index: 2000;
+}
+
+.overlay.open {
+  display: block;
+}
+
+.example-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: var(--spacing12);
+  background-color: var(--colorGlobalOverlayMedium);
+}
+
+.modal {
+  max-width: 480px;
+  border-radius: var(--radius3);
+  padding: var(--spacing12);
+  background-color: var(--colorNeutralBackgroundStrong);
+}
+
+.overlay .modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.modal-heading {
+  font-size: var(--fontGlobalSizeM);
+  line-height: var(--fontGlobalLineHeightS);
+  color: var(--colorNeutralContentStrong);
+  padding: 0;
+  margin: 0;
+}
+
+.cross-modal-button {
+  position: absolute;
+  top: -6px; /* should be avoided by keeping natural position but it makes the pixel perfect */
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--colorActionTertiaryContentDefault);
+  cursor: pointer;
+}
+
+.cross-modal-button .icon {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-text {
+  margin: 0;
+  padding: var(--spacing4) 0 var(--spacing8) 0;
+  line-height: var(--fontGlobalLineHeightS);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing8);
+}
+
+.form-action-wrapper {
+  display: flex;
+  justify-content: end;
+  gap: var(--spacing8);
+  padding-top: var(--spacing8);
+}
